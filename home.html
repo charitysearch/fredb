@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<style>
+html,body{margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#e0f0ff;color:#333;}
+nav{background:#0b76d1;display:flex;justify-content:space-between;align-items:center;padding:15px 30px;position:sticky;top:0;z-index:1000;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+nav .logo{color:white;font-weight:bold;font-size:1.5rem;}
+nav .menu{display:flex;gap:20px;}
+nav .menu a{color:white;font-weight:bold;padding:8px 12px;border-radius:6px;transition:all 0.3s;}
+nav .menu a:hover{background:rgba(255,255,255,0.2);}
+nav .hamburger{display:none;font-size:1.8rem;color:white;cursor:pointer;}
+@media(max-width:768px){nav .menu{display:none;flex-direction:column;background:#0b76d1;position:absolute;top:60px;right:0;width:220px;border-radius:0 0 0 10px;overflow:hidden;}nav .menu.show{display:flex;}nav .hamburger{display:block;}}
+.container{max-width:1000px;margin:50px auto;padding:20px;text-align:center;}
+.profile{width:200px;height:200px;border-radius:50%;object-fit:cover;border:5px solid #0b76d1;box-shadow:0 8px 20px rgba(11,118,209,0.2);margin-bottom:20px;}
+h1{font-size:3rem;margin-bottom:15px;color:#0b76d1;animation:fadeInDown 1s ease forwards;}
+p{color:#555;line-height:1.6;animation:fadeIn 1s ease forwards;}
+section{background:white;border-radius:15px;padding:25px;margin:20px auto;box-shadow:0 10px 25px rgba(0,0,0,0.1);text-align:left;max-width:800px;animation:fadeIn 1s ease forwards;}
+h2{margin-bottom:10px;color:#0b76d1;}
+.btn{padding:12px 30px;background:linear-gradient(45deg,#4facfe,#00f2fe);color:white;font-weight:bold;border-radius:50px;display:inline-block;margin-top:20px;text-align:center;transition:all 0.3s;}
+.btn:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 10px 25px rgba(0,0,0,0.25);}
+@keyframes fadeInDown{0%{opacity:0;transform:translateY(-50px);}100%{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{0%{opacity:0;}100%{opacity:1;}}
+</style>
+<script>
+function toggleMenu(){document.querySelector('.menu').classList.toggle('show');}
+</script>
+</head>
+<body>
+<nav>
+  <div class="logo">Fred B.</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="menu">
+    <a href="index.html">Welcome</a>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
+    <a href="other.html">Other</a>
+  </div>
+</nav>
+
+<div class="container">
+  <img src="files/fred.jpg" class="profile">
+  <h1>Hello, I'm Fred!</h1>
+  <p>Welcome to my personal website. I am a high school student passionate about learning, technology, and making a positive impact in my community.</p>
+
+  <section>
+    <h2>Bio</h2>
+    <p>Full Name: Fredrick A. Brunner<br>
+    Nickname: Fred B.<br>
+    Date of Birth: September 25, 2008<br>
+    School: Downingtown West High School, expected graduation June 2027<br>
+    Clubs / Honors: Spanish Honors Society<br>
+    Skills / Qualities: Kind, honest, hardworking, reliable, strong work ethic, good team player</p>
+  </section>
+
+  <section>
+    <h2>Interests & Projects</h2>
+    <p>I enjoy exploring technology, programming, and volunteering. One of my projects includes helping develop a charity search engine and database to connect people with the right organizations. I am always looking to learn and take on challenges that allow me to grow personally and help others.</p>
+  </section>
+
+  <a href="resume.html" class="btn">View Resume</a>
+</div>
+</body>
+</html>

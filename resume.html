@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Resume</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<style>
+html,body{margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#e0f0ff;color:#333;}
+nav{background:#0b76d1;display:flex;justify-content:space-between;align-items:center;padding:15px 30px;position:sticky;top:0;z-index:1000;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+nav .logo{color:white;font-weight:bold;font-size:1.5rem;}
+nav .menu{display:flex;gap:20px;}
+nav .menu a{color:white;font-weight:bold;padding:8px 12px;border-radius:6px;transition:all 0.3s;}
+nav .menu a:hover{background:rgba(255,255,255,0.2);}
+nav .hamburger{display:none;font-size:1.8rem;color:white;cursor:pointer;}
+@media(max-width:768px){nav .menu{display:none;flex-direction:column;background:#0b76d1;position:absolute;top:60px;right:0;width:220px;border-radius:0 0 0 10px;overflow:hidden;}nav .menu.show{display:flex;}nav .hamburger{display:block;}}
+.container{max-width:1000px;margin:50px auto;padding:20px;text-align:center;}
+h1{font-size:3rem;margin-bottom:20px;color:#0b76d1;}
+iframe{width:100%;height:90vh;border:5px solid #0b76d1;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.15);}
+.btn{padding:12px 30px;background:linear-gradient(45deg,#4facfe,#00f2fe);color:white;font-weight:bold;border-radius:50px;display:inline-block;margin-top:20px;text-align:center;transition:all 0.3s;}
+.btn:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 10px 25px rgba(0,0,0,0.25);}
+</style>
+<script>
+function toggleMenu(){document.querySelector('.menu').classList.toggle('show');}
+</script>
+</head>
+<body>
+<nav>
+  <div class="logo">Fred B.</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="menu">
+    <a href="index.html">Welcome</a>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
+    <a href="other.html">Other</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Resume</h1>
+  <iframe src="files/resume.pdf" title="Fred's Resume"></iframe>
+  <a href="files/resume.pdf" class="btn" target="_blank">Download Resume</a>
+</div>
+</body>
+</html>

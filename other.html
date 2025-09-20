@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Other</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<style>
+html,body{margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#e0f0ff;color:#333;}
+nav{background:#0b76d1;display:flex;justify-content:space-between;align-items:center;padding:15px 30px;position:sticky;top:0;z-index:1000;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+nav .logo{color:white;font-weight:bold;font-size:1.5rem;}
+nav .menu{display:flex;gap:20px;}
+nav .menu a{color:white;font-weight:bold;padding:8px 12px;border-radius:6px;transition:all 0.3s;}
+nav .menu a:hover{background:rgba(255,255,255,0.2);}
+nav .hamburger{display:none;font-size:1.8rem;color:white;cursor:pointer;}
+@media(max-width:768px){nav .menu{display:none;flex-direction:column;background:#0b76d1;position:absolute;top:60px;right:0;width:220px;border-radius:0 0 0 10px;overflow:hidden;}nav .menu.show{display:flex;}nav .hamburger{display:block;}}
+.container{max-width:1000px;margin:50px auto;padding:20px;text-align:center;}
+h1{font-size:3rem;margin-bottom:20px;color:#0b76d1;}
+section{background:white;border-radius:15px;padding:25px;margin:20px auto;box-shadow:0 10px 25px rgba(0,0,0,0.1);text-align:left;max-width:800px;animation:fadeIn 1s ease forwards;}
+p{color:#555;line-height:1.8;margin-bottom:15px;}
+.btn{padding:12px 30px;background:linear-gradient(45deg,#4facfe,#00f2fe);color:white;font-weight:bold;border-radius:50px;display:inline-block;margin-top:20px;text-align:center;transition:all 0.3s;}
+.btn:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 10px 25px rgba(0,0,0,0.25);}
+@keyframes fadeIn{0%{opacity:0;}100%{opacity:1;}}
+</style>
+<script>
+function toggleMenu(){document.querySelector('.menu').classList.toggle('show');}
+</script>
+</head>
+<body>
+<nav>
+  <div class="logo">Fred B.</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="menu">
+    <a href="index.html">Welcome</a>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
+    <a href="other.html">Other</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Other</h1>
+
+  <section>
+    <p>Education is one of the most important foundations for personal and professional growth. It opens doors to opportunities, encourages critical thinking, and allows individuals to explore the world in depth. Learning new skills and acquiring knowledge helps us adapt to changing environments and prepares us for challenges we may face in the future.</p>
+
+    <p>Technology continues to shape every aspect of our lives, from communication to transportation, healthcare, and entertainment. Understanding how technology works and using it effectively is essential for success in today’s world. Developing skills in programming, electronics, and digital problem-solving can open up a wide array of career paths and personal projects.</p>
+
+    <p>Volunteering and helping others is a valuable way to contribute to the community while developing empathy, teamwork, and leadership skills. By connecting people with the right resources, engaging in projects, or simply lending a helping hand, we can make a positive impact on society and inspire others to do the same.</p>
+
+    <p>Hobbies and personal interests are also essential for a balanced life. Whether it’s exploring the outdoors, reading, creating art, or experimenting with technology, engaging in activities we enjoy provides relaxation, sparks creativity, and helps build unique skills. Pursuing personal passions alongside academics or work makes life richer and more fulfilling.</p>
+
+    <p>Continuous self-improvement is key to growth. Setting goals, reflecting on experiences, and being open to learning helps build resilience and adaptability. Embracing challenges, staying curious, and collaborating with others allows us to gain perspective and expand our horizons. Every step we take to learn something new or contribute positively matters.</p>
+
+    <p>Ultimately, life is a combination of education, technology, creativity, community, and personal growth. Focusing on these aspects allows us to build meaningful experiences, achieve our aspirations, and make a difference in the world around us.</p>
+  </section>
+
+  <a href="home.html" class="btn">Back to Home</a>
+</div>
+</body>
+</html>
