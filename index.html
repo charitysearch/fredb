@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Welcome</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <style>
 html,body{height:100%;margin:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;}
 .welcome-container{
@@ -29,6 +28,7 @@ html,body{height:100%;margin:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans
   100%{opacity:1;transform:translateY(0);}
 }
 .btn{
+  display:inline-block;
   padding:15px 35px;
   background:linear-gradient(45deg,#ff6ec4,#7873f5);
   color:white;
@@ -40,6 +40,8 @@ html,body{height:100%;margin:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans
   transition:all 0.4s ease;
   animation:fadeInUp 1s ease 0.5s forwards;
   opacity:0;
+  text-decoration:none;
+  touch-action:manipulation;
 }
 .btn:hover{
   transform:translateY(-5px) scale(1.05);
